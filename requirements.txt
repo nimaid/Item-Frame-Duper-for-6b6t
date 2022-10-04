@@ -2,3 +2,4 @@ pywin32
 keyboard
 pyautogui
 pysimplegui
+numpy

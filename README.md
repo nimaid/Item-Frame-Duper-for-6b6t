@@ -2,14 +2,13 @@
 A simple program that automates the duplication glitch on the Minecraft server 6b6t.org
 Supported Operating Systems: Windows 10 64 bit, Windows 11 64 bit, Windows 7 64 bit.
 
-Download the .exe from this link - https://www.dropbox.com/s/kpega5hlb2ojwne/AutoDuperByWindSlashking.exe?dl=0
-To use the script click on the 'Start Duping' button and switch to Minecraft. You have 10 seconds before the script starts
+To use the script click on the 'Start Duping' button and switch to Minecraft. You have 5 seconds before the script starts
 clicking. To stop the script simply hold ALT key on your keyboard.
-Discord - Agent Smith#9660
-Youtube - https://www.youtube.com/channel/UCP--oW_mE6ZVLptYoTDMe1w
+
+Modified for working item frame dupe on 6b6t, tested on 2022/10/04.
 
 ###########################################################################################################
 
 If you want to run the .py script install python 3.10, and run InstallRequirements.bat.
-Next, Right-Click AutoDuperByWindSlashKing.py and under "Open With" Click Python 3.10
+Next, Right-Click AutoDuperV2.py and under "Open With" Click Python 3.10
 
