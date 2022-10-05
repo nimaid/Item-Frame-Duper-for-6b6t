@@ -56,7 +56,7 @@ def main():
 
         t1.join() 
         print("Script Finished Clicking")
-        sg.popup_ok('Finished Duping', title=('Script Stopped'))
+        sg.popup_notify('Finished Duping')
     menu = ['&GitHub', ['Visit GitHub Project Page',]],
     layout = [  
                 [sg.Menu(menu)],
