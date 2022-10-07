@@ -1,14 +1,10 @@
-from ctypes.wintypes import SIZE
 import keyboard
 import webbrowser
-import win32api, win32con
-import threading
 import pyautogui
 import time
 import PySimpleGUI as sg
 import numpy as np
-#delayLeft = 2
-#delayRight = 0.1
+
 delay = 0.5
 startDelay = 5
 pickupDelay = 0.75
@@ -17,27 +13,10 @@ script_running = False
 def main():
     def dupingClicker():
         
-        # def rightClicker():
-            # print("rightClicker activated")
-            # time.sleep(10)
-            # while keyboard.is_pressed('alt') == False and script_running == True:
-                # win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN,0,0)
-                # time.sleep(0.1)
-                # win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP,0,0)
-                # time.sleep(delayRight)
-
-        # def leftClicker():
-            # print("leftClicker activated")
-            # time.sleep(12)
-            # while keyboard.is_pressed('alt') == False and script_running == True:
-                # pyautogui.click()
-                # time.sleep(delayLeft)
-        
         def leftClick():
             pyautogui.click()
         def rightClick():
-            win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN,0,0)
-            win32api.mouse_event(win32con.MOUSEEVENTF_RIGHTUP,0,0)
+            pyautogui.click(button='right')
         
         def clicker():
             time.sleep(startDelay)
@@ -49,14 +28,11 @@ def main():
                 rightClick()
                 time.sleep(delay)
             
-            
+        clicker()        
         
-        t1 = threading.Thread(target=clicker)
-        t1.start()
-
-        t1.join() 
         print("Script Finished Clicking")
         sg.popup_notify('Finished Duping')
+        
     menu = ['&GitHub', ['Visit GitHub Project Page',]],
     layout = [  
                 [sg.Menu(menu)],
@@ -79,7 +55,7 @@ def main():
             pickupDelay = float(values[2])
             script_running = True
             sg.popup_notify('Hold ALT to stop duping') 
-            dupingClicker() 
+            dupingClicker()
             script_running = False 
             window['-STATUS-'].update('Script is not running')
             window['Start Duping'].update(disabled=False)
