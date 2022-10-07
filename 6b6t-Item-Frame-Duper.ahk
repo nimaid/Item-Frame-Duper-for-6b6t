@@ -10,7 +10,7 @@ Menu, Tray, Icon, %I_Icon%
 
 #MaxThreadsPerHotkey 3
 
-TrayTip 6b6t Item Frame Duper Script, Press Ctrl+Z to start/stop the autoclicker!, 1
+TrayTip 6b6t Item Frame Duper, Press Ctrl+Z to start/stop the autoclicker!, 1
 
 ^z::
 {
