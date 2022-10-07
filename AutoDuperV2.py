@@ -5,7 +5,7 @@ import time
 import PySimpleGUI as sg
 import numpy as np
 
-delay = 0.5
+delay = 0.25
 startDelay = 5
 pickupDelay = 0.75
 script_running = False
@@ -36,7 +36,7 @@ def main():
     menu = ['&GitHub', ['Visit GitHub Project Page',]],
     layout = [  
                 [sg.Menu(menu)],
-                [sg.Text('Click delay: '), sg.Spin(initial_value=0.5, values=tuple(np.arange(0.1,4.0,0.1)),size=(5, 5)), sg.Text('seconds')],
+                [sg.Text('Click delay: '), sg.Spin(initial_value=0.25, values=tuple(np.arange(0.1,4.0,0.1)),size=(5, 5)), sg.Text('seconds')],
                 [sg.Text('Item pickup delay: '), sg.Spin(initial_value=0.75, values=tuple(np.arange(0.1,4.0,0.1)),size=(5, 5)), sg.Text('seconds')],
                 [sg.Text('Default delay is recommended')],
                 [sg.Button('Start Duping'),sg.Button("Help"),sg.Text('', size=(22, 0)), sg.Button('Exit')],
